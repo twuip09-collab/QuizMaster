@@ -1,3 +1,12 @@
-"scripts": {
-  "start": "node serverer.js"
+{
+  "name": "quizmaster",
+  "version": "1.0.0",
+  "description": "Химия боюнча тест",
+  "main": "serverer.js",
+  "scripts": {
+    "start": "node serverer.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
