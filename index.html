@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster — Химия</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>QuizMaster</h1>
+
+        <h2>Химия боюнча билимиңди текшер!</h2>
+
+        <p>
+            Химия сабагы боюнча билимиңди сынап көр.
+            Тестте 10 суроо бар.
+        </p>
+
+        <input
+            type="text"
+            id="studentName"
+            placeholder="Атыңды жана фамилияңды жаз"
+            maxlength="50"
+        >
+
+        <button id="startButton">
+            Тестти баштоо
+        </button>
+
+        <p id="message"></p>
+
+        <div class="info">
+            <span>10 суроо</span>
+            <span>Химия</span>
+        </div>
+
+    </div>
+
+    <script>
+        const nameInput = document.getElementById("studentName");
+        const startButton = document.getElementById("startButton");
+        const message = document.getElementById("message");
+
+        startButton.addEventListener("click", function () {
+            const name = nameInput.value.trim();
+
+            if (name === "") {
+                message.textContent = "Атыңды жаз!";
+                message.style.color = "red";
+                return;
+            }
+
+            message.textContent = "Салам, " + name + "! Тест жакында башталат.";
+            message.style.color = "green";
+        });
+    </script>
+
+</body>
+</html>
